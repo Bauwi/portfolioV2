@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'react-emotion';
-import { navigateTo, withPrefix } from 'gatsby-link';
-import { toggleDrawer as toggleDrawerAction } from '../../state/app';
+import Link from 'gatsby-link';
 
 const PaperContainer = styled.div`
   height: 100vh;
@@ -24,8 +23,7 @@ const Header = styled.header`
   align-items: center;
   height: ${p => p.theme.size(4)};
 `;
-
-const Item = styled.a`
+const BaseItem = styled(Link)`
   font-family: Helvetica;
   font-weight: 100;
   font-style: italic;
@@ -34,6 +32,12 @@ const Item = styled.a`
   padding-right: 1rem;
   text-align: right;
   text-transform: uppercase;
+  text-decoration: none;
+`;
+const Item = styled(({ className, ...props }) => (
+  <BaseItem {...props} activeClassName={className} />
+))`
+  color: red !important;
 `;
 
 // Static data to keep it simple
@@ -43,26 +47,15 @@ const items = [
   { url: '/projects/', name: 'Projects' },
 ];
 
-const Drawer = ({ isDrawerOpen, toggleDrawer }) => (
+export default () => (
   <PaperContainer>
     <Paper>
       <Header />
-      {items.map(item => (
-        <Item
-          key={item.url}
-          onClick={() => {
-            navigateTo(withPrefix(item.url));
-            toggleDrawer(false);
-          }}
-        >
-          {item.name}
-        </Item>
-      ))}
+      <Item to="/" exact>
+        Home
+      </Item>
+      <Item to="/about/">About</Item>
+      <Item to="/projects/">Projects</Item>
     </Paper>
   </PaperContainer>
 );
-
-export default connect(
-  state => ({ isDrawerOpen: state.app.isDrawerOpen }),
-  dispatch => ({ toggleDrawer: open => dispatch(toggleDrawerAction(open)) }),
-)(Drawer);
