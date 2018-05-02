@@ -1,0 +1,130 @@
+const projects = [
+  {
+    name: 'Chat App',
+    stack: [
+      'react',
+      'redux',
+      'express',
+      'node',
+      'mongo',
+      'sockets',
+      'herokuapp',
+    ],
+    top: true,
+  },
+  {
+    name: 'Blog App',
+    stack: ['react', 'redux', 'firebase', 'scss', 'herokuapp'],
+    top: true,
+  },
+  {
+    name: 'Chat App',
+    stack: [
+      'react',
+      'redux',
+      'express',
+      'node',
+      'mongo',
+      'sockets',
+      'herokuapp',
+    ],
+    top: true,
+  },
+  {
+    name: 'Chat App2',
+    stack: [
+      'react',
+      'redux',
+      'express',
+      'node',
+      'mongo',
+      'sockets',
+      'herokuapp',
+    ],
+    top: false,
+  },
+  {
+    name: 'Blog App2',
+    stack: ['react', 'redux', 'firebase', 'scss', 'herokuapp'],
+    top: false,
+  },
+  {
+    name: 'Chat App2',
+    stack: [
+      'react',
+      'redux',
+      'express',
+      'node',
+      'mongo',
+      'sockets',
+      'herokuapp',
+    ],
+    top: false,
+  },
+  {
+    name: 'Chat App2',
+    stack: [
+      'react',
+      'redux',
+      'express',
+      'node',
+      'mongo',
+      'sockets',
+      'herokuapp',
+    ],
+    top: false,
+  },
+  {
+    name: 'Blog App2',
+    stack: ['react', 'redux', 'firebase', 'scss', 'herokuapp'],
+    top: false,
+  },
+  {
+    name: 'Chat App2',
+    stack: [
+      'react',
+      'redux',
+      'express',
+      'node',
+      'mongo',
+      'sockets',
+      'herokuapp',
+    ],
+    top: false,
+  },
+  {
+    name: 'Chat App2',
+    stack: [
+      'react',
+      'redux',
+      'express',
+      'node',
+      'mongo',
+      'sockets',
+      'herokuapp',
+    ],
+    top: false,
+  },
+  {
+    name: 'Blog App2',
+    stack: ['react', 'redux', 'firebase', 'scss', 'herokuapp'],
+    top: false,
+  },
+  {
+    name: 'Chat App2 with a long long name',
+    stack: [
+      'react',
+      'redux',
+      'express',
+      'node',
+      'mongo',
+      'sockets',
+      'herokuapp',
+    ],
+    top: false,
+  },
+];
+
+module.exports = {
+  projects,
+};
