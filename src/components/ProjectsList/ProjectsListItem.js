@@ -23,6 +23,7 @@ const ProjectsListItem = styled.li`
   }
 
   &:hover {
+    border: 1px solid transparent;
     border-bottom: 8px solid red;
     li,
     a {
@@ -43,7 +44,7 @@ const Stack = styled.ul`
   height: 33%;
   li {
     font-family: Helvetica, Arial, sans-serif;
-    opacity: 0;
+    opacity: 0.3;
     list-style-type: none;
     margin: 0 0.5rem;
   }
@@ -55,11 +56,15 @@ const ButtonsWrapper = styled.div`
 `;
 
 export default class ProjectsListItemComp extends Component {
-  renderStack = () =>
-    this.props.project.stack.reverse().map(tech => <li>{tech}</li>);
+  renderStack = () => {
+    const stack = [
+      ...this.props.project.stackFront,
+      ...this.props.project.stackBack,
+    ];
+    return stack.reverse().map(tech => <li>{tech}</li>);
+  };
 
   render() {
-    console.log(this.props.styles);
     return (
       <ProjectsListItem styles={this.props.styles}>
         <ItemHeader>

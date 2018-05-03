@@ -3,7 +3,7 @@ import styled from 'react-emotion';
 import Link from 'gatsby-link';
 
 const ExternalLink = styled.a`
-  opacity: 0;
+  opacity: 0.3;
   background: none;
   border: none;
   border-radius: 50%;

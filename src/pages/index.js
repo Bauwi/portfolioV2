@@ -7,7 +7,7 @@ const IndexPageHeader = styled.header`
   flex-direction: column;
   justify-content: center;
   background: white;
-  height: 50vh;
+  height: 60vh;
   padding: 2rem;
   text-align: right;
 
@@ -29,14 +29,14 @@ const IndexPageHeader = styled.header`
   }
 `;
 const LastName = styled.span`
-  color: #494949;
+  color: rgba(0, 0, 0, 0.1);
 `;
 
 const IndexPageMain = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 50vh;
+  height: 40vh;
   text-align: right;
 
   div {
@@ -52,13 +52,15 @@ const IndexPageMain = styled.section`
     padding-right: 2rem;
     padding-bottom: 3rem;
     a {
-      color: white;
+      color: rgba(255, 255, 255, 0.3);
       text-decoration: none;
       margin: 0 1rem;
+      &:hover {
+        color: red;
+      }
     }
   }
 `;
-
 const IndexPage = () => (
   <div>
     <IndexPageHeader>

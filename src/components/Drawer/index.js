@@ -25,8 +25,7 @@ const Header = styled.header`
 `;
 const BaseItem = styled(Link)`
   font-family: Helvetica;
-  font-weight: 100;
-  font-style: italic;
+  font-weight: 500;
   color: white;
   cursor: pointer;
   padding-right: 1rem;
@@ -40,13 +39,6 @@ const Item = styled(({ className, ...props }) => (
   color: red !important;
 `;
 
-// Static data to keep it simple
-const items = [
-  { url: '/', name: 'Home' },
-  { url: '/about/', name: 'About' },
-  { url: '/projects/', name: 'Projects' },
-];
-
 export default () => (
   <PaperContainer>
     <Paper>
@@ -56,6 +48,7 @@ export default () => (
       </Item>
       <Item to="/about/">About</Item>
       <Item to="/projects/">Projects</Item>
+      <Item to="/skills/">Skills</Item>
     </Paper>
   </PaperContainer>
 );

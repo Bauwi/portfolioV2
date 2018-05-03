@@ -9,7 +9,6 @@ import { filterProjects } from '../../utils/filterProjects';
 const ProjectsListTitle = styled.h2`
   font-family: Nothing You Could Do, Arial, sans-serif;
   border-right: 5px solid red;
-  font-size: 1rem;
   font-weight: 900;
   margin: 0 0 1rem 0;
   padding: 1rem;
@@ -30,7 +29,6 @@ export default class ProjectsListComp extends Component {
   };
 
   render() {
-    console.log(projects);
     return (
       <div>
         <ProjectsListTitle>{this.props.title}</ProjectsListTitle>

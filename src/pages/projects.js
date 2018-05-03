@@ -31,7 +31,7 @@ const ProjectsPage = () => (
     <ProjectsPageHeader>
       <ProjectsList
         projects={filterProjects('TOP', projects)}
-        title="Recommanded..."
+        title="Relevant..."
         styles={ProjectsListHeaderStyles}
       />
     </ProjectsPageHeader>
