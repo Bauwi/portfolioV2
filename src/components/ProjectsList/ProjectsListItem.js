@@ -57,28 +57,33 @@ const ButtonsWrapper = styled.div`
 
 export default class ProjectsListItemComp extends Component {
   renderStack = () => {
-    const stack = [
-      ...this.props.project.stackFront,
-      ...this.props.project.stackBack,
-    ];
-    return stack.reverse().map(tech => <li>{tech}</li>);
+    const {
+      project: { stackBack, stackFront, id },
+    } = this.props;
+    return [...stackFront, ...stackBack]
+      .reverse()
+      .map(tech => <li key={`${id || 0}${tech}`}>{tech}</li>);
   };
 
   render() {
+    const {
+      styles,
+      project: { codeUrl, liveUrl },
+    } = this.props;
     return (
-      <ProjectsListItem styles={this.props.styles}>
+      <ProjectsListItem styles={styles}>
         <ItemHeader>
           <Stack>{this.renderStack()}</Stack>
           <ButtonsWrapper>
             <ExternalLink
               value="code"
               imgUrl="/images/github.png"
-              destination="https://github.com/Bauwi"
+              destination={codeUrl}
             />
             <ExternalLink
               value="live"
               imgUrl="/images/live.png"
-              destination="https://github.com/Bauwi"
+              destination={liveUrl}
             />
           </ButtonsWrapper>
         </ItemHeader>

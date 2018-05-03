@@ -12,11 +12,12 @@ const ProjectsPageHeader = styled.header`
   flex-direction: column;
   background: white;
   color: black;
-  height: 60vh;
+  min-height: 88vh;
+  height: 88vh;
 `;
 
 const ProjectsPageMain = styled.section`
-  min-height: 40vh;
+  min-height: 12vh;
 `;
 
 const ProjectsListHeaderStyles = {

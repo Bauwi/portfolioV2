@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'gatsby-link';
 import styled from 'react-emotion';
 
 import SkillsList from '../components/SkillsList/SkillsList';
@@ -8,7 +7,7 @@ import projects from '../utils/projects';
 import getProjectsStats from '../utils/getProjectsStats';
 
 const { stackFront, stackBack, total } = getProjectsStats(projects);
-console.log(projects);
+
 const SkillsPageTop = styled.header`
   display: flex;
   flex-direction: column;
@@ -41,7 +40,7 @@ const SkillsPageSectionHeader = styled.header`
     font-size: 1.3rem;
   }
 `;
-const SkillsPageTopFooter = styled.footer`
+const SkillsPageSectionFooter = styled.footer`
   display: flex;
   align-items: center;
   font-family: Nothing You Could Do, Arial, sans-serif;
@@ -68,18 +67,18 @@ const SkillsPage = () => (
           These are not marks <Smile> =) </Smile>{' '}
         </aside>
       </SkillsPageSectionHeader>
-      <SkillsList stackName="stackFront" stack={stackFront.slice(0, 7)} />
+      <SkillsList stackName="stackFront" stack={stackFront} />
     </SkillsPageTop>
     <SkillsPageBottom>
       <SkillsPageSectionHeader>
         <h2>Back</h2>
       </SkillsPageSectionHeader>
-      <SkillsList stackName="stackBack" stack={stackBack.slice(0, 7)} />
-      <SkillsPageTopFooter>
+      <SkillsList stackName="stackBack" stack={stackBack} />
+      <SkillsPageSectionFooter>
         <p>
           ...in <Total>{total}</Total> projects{' '}
         </p>
-      </SkillsPageTopFooter>
+      </SkillsPageSectionFooter>
     </SkillsPageBottom>
   </div>
 );

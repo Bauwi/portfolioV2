@@ -6,6 +6,13 @@ import ProjectsListItem from './ProjectsListItem';
 import { projects } from '../../utils/projects';
 import { filterProjects } from '../../utils/filterProjects';
 
+const ProjectsListWrapper = styled.div`
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
 const ProjectsListTitle = styled.h2`
   font-family: Nothing You Could Do, Arial, sans-serif;
   border-right: 5px solid red;
@@ -19,21 +26,27 @@ const ProjectsList = styled.ul`
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 0;
-  height: 100%;
 `;
 export default class ProjectsListComp extends Component {
   renderprojectsList = () => {
     return this.props.projects.map(project => {
-      return <ProjectsListItem project={project} styles={this.props.styles} />;
+      return (
+        <ProjectsListItem
+          key={project.id}
+          project={project}
+          styles={this.props.styles}
+        />
+      );
     });
   };
 
   render() {
     return (
-      <div>
+      <ProjectsListWrapper>
         <ProjectsListTitle>{this.props.title}</ProjectsListTitle>
         <ProjectsList>{this.renderprojectsList()}</ProjectsList>
-      </div>
+        <p />
+      </ProjectsListWrapper>
     );
   }
 }
