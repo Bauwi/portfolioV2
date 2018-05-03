@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'react-emotion';
 
 import SkillsList from '../components/SkillsList/SkillsList';
@@ -13,13 +13,12 @@ const SkillsPageTop = styled.header`
   flex-direction: column;
   background: white;
   color: black;
-  height: 50vh;
+  min-height: 50vh;
 `;
 
 const SkillsPageBottom = styled.section`
   display: flex;
   flex-direction: column;
-  height: 50vh;
   min-height: 50vh;
 `;
 
@@ -50,6 +49,19 @@ const SkillsPageSectionFooter = styled.footer`
     margin: 0;
   }
 `;
+const Button = styled.button`
+  color: ${p => (p.name === 'showAllFront' ? 'black' : 'white')};
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 0.5rem;
+  font-style: italic;
+  font-weight: 600;
+  padding: 0.5rem 0 0 0;
+  opacity: 0.7;
+  outline: none;
+  text-decoration: underline;
+`;
 const Total = styled.span`
   font-size: 2rem;
 `;
@@ -58,29 +70,61 @@ const Smile = styled.span`
   transform: rotateZ(90deg) rotateX(180deg);
 `;
 
-const SkillsPage = () => (
-  <div>
-    <SkillsPageTop>
-      <SkillsPageSectionHeader>
-        <h2>Front</h2>
-        <aside>
-          These are not marks <Smile> =) </Smile>{' '}
-        </aside>
-      </SkillsPageSectionHeader>
-      <SkillsList stackName="stackFront" stack={stackFront} />
-    </SkillsPageTop>
-    <SkillsPageBottom>
-      <SkillsPageSectionHeader>
-        <h2>Back</h2>
-      </SkillsPageSectionHeader>
-      <SkillsList stackName="stackBack" stack={stackBack} />
-      <SkillsPageSectionFooter>
-        <p>
-          ...in <Total>{total}</Total> projects{' '}
-        </p>
-      </SkillsPageSectionFooter>
-    </SkillsPageBottom>
-  </div>
-);
+class SkillsPage extends Component {
+  state = {
+    showAllFront: false,
+    showAllBack: false,
+  };
+
+  showAll = category => {
+    this.setState(prevProps => ({ [category]: !prevProps[category] }));
+  };
+
+  render() {
+    const { showAllFront, showAllBack } = this.state;
+    return (
+      <div>
+        <SkillsPageTop>
+          <SkillsPageSectionHeader>
+            <h2>Front</h2>
+            <aside>
+              These are not marks <Smile> =) </Smile>{' '}
+            </aside>
+          </SkillsPageSectionHeader>
+          <SkillsList
+            stackName="stackFront"
+            stack={showAllFront ? stackFront : stackFront.slice(0, 5)}
+          />
+          <Button
+            onClick={() => this.showAll('showAllFront')}
+            name="showAllFront"
+          >
+            {showAllFront ? 'HIDE SOME' : 'SHOW ALL'}
+          </Button>
+        </SkillsPageTop>
+        <SkillsPageBottom>
+          <SkillsPageSectionHeader>
+            <h2>Back</h2>
+          </SkillsPageSectionHeader>
+          <SkillsList
+            stackName="stackBack"
+            stack={showAllBack ? stackBack : stackBack.slice(0, 5)}
+          />
+          <Button
+            onClick={() => this.showAll('showAllBack')}
+            name="showAllBack"
+          >
+            {showAllBack ? 'HIDE SOME' : 'SHOW ALL'}
+          </Button>
+          <SkillsPageSectionFooter>
+            <p>
+              ...in <Total>{total}</Total> projects{' '}
+            </p>
+          </SkillsPageSectionFooter>
+        </SkillsPageBottom>
+      </div>
+    );
+  }
+}
 
 export default SkillsPage;

@@ -20,7 +20,7 @@ const SkillsListItem = styled.li`
 
 const Name = styled.p`
   font-size: 0.7rem;
-  margin: 0 2rem;
+  margin: 0 2rem 0 0;
   width: 15%;
 `;
 
@@ -42,7 +42,6 @@ const Bar = styled.div`
 `;
 
 export default ({ name, count, stackName }) => {
-  console.log(stackName);
   return (
     <SkillsListItem>
       <Name>{name}</Name>
