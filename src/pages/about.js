@@ -1,20 +1,77 @@
 import React from 'react';
 import styled from 'react-emotion';
 
+const AboutPage = styled.div`
+  height: 100%;
+`;
+
 const AboutPageTop = styled.header`
-  min-height: 60vh;
-  height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  background-image: url('/images/europe-top.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+  color: black;
+  min-height: 104px;
+  h2 {
+    font-family: Nothing You Could Do, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    padding: 1rem;
+  }
 `;
 
 const AboutPageBottom = styled.section`
-  min-height: 20vh;
+  background-image: url('/images/europe-bottom.png');
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+  min-height: calc(90vh - 104px);
 `;
 
+const AboutPageBottomLeft = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: calc(90vh - 104px);
+  padding: 1rem;
+  width: 50%;
+
+  p {
+    font-family: Nothing You Could Do, Arial, sans-serif;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    font-weight: 600;
+    opacity: 0.8;
+  }
+`;
+
+const Footer = styled.footer`
+  font-family: Nothing You Could Do, Arial, sans-serif;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 300;
+  height: 10vh;
+  text-align: center;
+`;
 const AboutComp = () => (
-  <div>
-    <AboutPageTop>top</AboutPageTop>
-    <AboutPageBottom>bottom</AboutPageBottom>
-  </div>
+  <AboutPage>
+    <AboutPageTop>
+      <h2>About</h2>
+    </AboutPageTop>
+
+    <AboutPageBottom>
+      <AboutPageBottomLeft>
+        <p>
+          I am a 27 years old junior web developer looking for opportunities in
+          Paris and everywhere else.
+        </p>
+        <p>Love Music.</p>
+        <p>Hate well-kept lawn.</p>
+      </AboutPageBottomLeft>
+      <Footer>For hire !</Footer>
+    </AboutPageBottom>
+  </AboutPage>
 );
 
 export default AboutComp;
