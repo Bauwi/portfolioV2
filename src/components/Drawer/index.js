@@ -25,7 +25,9 @@ const NavBarSection = styled.nav`
   flex-direction: column;
   padding: 3rem 0;
 `;
-
+/* ************************************************ */
+/* trick to make activeClassName work properly      */
+/* ************************************************ */
 const BaseItem = styled(Link)`
   font-family: Helvetica;
   font-weight: 500;
@@ -41,6 +43,7 @@ const BaseItem = styled(Link)`
     height: 2rem;
   }
 `;
+
 const Item = styled(({ className, ...props }) => (
   <BaseItem {...props} activeClassName={className} />
 ))`
@@ -49,6 +52,7 @@ const Item = styled(({ className, ...props }) => (
     fill: red !important;
   }
 `;
+/* ************************************************ */
 
 const GithubLink = styled.a`
   padding-right: 1rem;

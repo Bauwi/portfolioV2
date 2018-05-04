@@ -1,17 +1,20 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import styled from 'react-emotion';
 
-const SecondPage = () => (
+const AboutPageTop = styled.header`
+  min-height: 60vh;
+  height: 80vh;
+`;
+
+const AboutPageBottom = styled.section`
+  min-height: 20vh;
+`;
+
+const AboutComp = () => (
   <div>
-    <iframe
-      src="https://open.spotify.com/embed?uri=spotify:album:0Ewp4PEIzkcAyrC463a5xF"
-      width="357"
-      height="437"
-      frameborder="0"
-      allowtransparency="true"
-      allow="encrypted-media"
-    />
+    <AboutPageTop>top</AboutPageTop>
+    <AboutPageBottom>bottom</AboutPageBottom>
   </div>
 );
 
-export default SecondPage;
+export default AboutComp;

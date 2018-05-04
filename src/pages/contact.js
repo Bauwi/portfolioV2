@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-const ProjectsPageTop = styled.header`
+const ContactPageTop = styled.header`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -12,7 +12,7 @@ const ProjectsPageTop = styled.header`
   height: 80vh;
 `;
 
-const ProjectsPageBottom = styled.section`
+const ContactPageBottom = styled.section`
   min-height: 20vh;
 `;
 
@@ -83,7 +83,7 @@ const Email = styled.a`
 
 const FormComp = () => (
   <div>
-    <ProjectsPageTop>
+    <ContactPageTop>
       <Header>
         <h2>Contact</h2>
       </Header>
@@ -96,13 +96,13 @@ const FormComp = () => (
 
         <Input type="submit" value="SEND" />
       </Form>
-    </ProjectsPageTop>
-    <ProjectsPageBottom>
+    </ContactPageTop>
+    <ContactPageBottom>
       <Header>
         <h2>Or...</h2>
       </Header>
       <Email href="mailto:kvn.philippe@gmail.com">kvn.philippe@gmail.com</Email>
-    </ProjectsPageBottom>
+    </ContactPageBottom>
   </div>
 );
 
