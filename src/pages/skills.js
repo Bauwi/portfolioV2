@@ -11,6 +11,7 @@ const { stackFront, stackBack, total } = getProjectsStats(projects);
 const SkillsPageTop = styled.header`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background: white;
   color: black;
   min-height: 50vh;
@@ -18,6 +19,7 @@ const SkillsPageTop = styled.header`
 
 const SkillsPageBottom = styled.section`
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   min-height: 50vh;
 `;

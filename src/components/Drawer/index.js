@@ -49,6 +49,7 @@ export default () => (
       <Item to="/about/">About</Item>
       <Item to="/projects/">Projects</Item>
       <Item to="/skills/">Skills</Item>
+      <Item to="/contact/">contact</Item>
     </Paper>
   </PaperContainer>
 );
