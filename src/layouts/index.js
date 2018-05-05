@@ -31,14 +31,17 @@ const TemplateWrapper = ({ children }) => (
         meta={[
           {
             name: 'description',
-            content: 'Junior web developer looking for opporunities',
+            content: 'Junior web developer looking for opportunities',
           },
           {
             name: 'keywords',
             content: 'mern, react, redux, node, express, mongo',
           },
         ]}
-      />
+      >
+        {' '}
+        <link rel="icon" type="image/png" href="/images/icon.png" />
+      </Helmet>
       <Container>
         <Drawer />
         <Content>{children()}</Content>
