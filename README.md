@@ -1,4 +1,4 @@
-![alt text](https://i.imgur.com/LKmigMp.png)
+![alt text](https://i.imgur.com/a1J7Ayv.png)
 
 # Portfolio V2
 
