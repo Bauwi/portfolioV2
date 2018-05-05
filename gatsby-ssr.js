@@ -8,7 +8,7 @@ exports.replaceRenderer = ({
   setHeadComponents,
 }) => {
   // SSR for emotion
-  const { html, ids, css } = extractCritical(renderToString(<ConnectedBody />));
+  const { html, ids, css } = extractCritical(renderToString(bodyComponent));
 
   /* eslint-disable react/no-danger */
   const criticalStyle = <style dangerouslySetInnerHTML={{ __html: css }} />;
