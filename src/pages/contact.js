@@ -6,7 +6,7 @@ const ContactPageTop = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: white;
+  background: #eaeaea;
   color: black;
   min-height: 60vh;
   height: 80vh;

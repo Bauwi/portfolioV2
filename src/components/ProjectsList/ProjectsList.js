@@ -10,7 +10,6 @@ const ProjectsListWrapper = styled.div`
   min-height: 88vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 `;
 
 const ProjectsListTitle = styled.h2`

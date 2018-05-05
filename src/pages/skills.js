@@ -8,11 +8,10 @@ import getProjectsStats from '../utils/getProjectsStats';
 
 const { stackFront, stackBack, total } = getProjectsStats(projects);
 
-const SkillsPageTop = styled.header`
+const SkillsPageTop = styled.section`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  background: white;
+  background: #eaeaea;
   color: black;
   min-height: 50vh;
 `;
@@ -96,6 +95,7 @@ class SkillsPage extends Component {
           <SkillsList
             stackName="stackFront"
             stack={showAllFront ? stackFront : stackFront.slice(0, 5)}
+            total={total}
           />
           <Button
             onClick={() => this.showAll('showAllFront')}
@@ -111,6 +111,7 @@ class SkillsPage extends Component {
           <SkillsList
             stackName="stackBack"
             stack={showAllBack ? stackBack : stackBack.slice(0, 5)}
+            total={total}
           />
           <Button
             onClick={() => this.showAll('showAllBack')}

@@ -10,7 +10,7 @@ import { filterProjects } from '../utils/filterProjects';
 const ProjectsPageHeader = styled.header`
   display: flex;
   flex-direction: column;
-  background: white;
+  background: #eaeaea;
   color: black;
   min-height: 88vh;
   height: 88vh;

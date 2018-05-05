@@ -6,7 +6,7 @@ const IndexPageHeader = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: white;
+  background: #eaeaea;
   height: 60vh;
   padding: 2rem;
   text-align: right;

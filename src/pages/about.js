@@ -8,7 +8,7 @@ const AboutPage = styled.div`
 const AboutPageTop = styled.header`
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: #eaeaea;
   background-image: url('/images/europe-top.png');
   background-repeat: no-repeat;
   background-position: 100% 0%;
@@ -38,17 +38,18 @@ const AboutPageBottomLeft = styled.section`
   width: 50%;
 
   p {
-    font-family: Nothing You Could Do, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 1.2rem;
+    font-style: italic;
     margin-left: 2rem;
-    font-weight: 600;
+    font-weight: 300;
     opacity: 0.8;
   }
 `;
 
 const Footer = styled.footer`
-  font-family: Nothing You Could Do, Arial, sans-serif;
-  font-size: 2rem;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
   font-style: italic;
   font-weight: 300;
   height: 10vh;
@@ -63,13 +64,13 @@ const AboutComp = () => (
     <AboutPageBottom>
       <AboutPageBottomLeft>
         <p>
-          I am a 27 years old junior web developer looking for opportunities in
-          Paris and everywhere else.
+          27 years old junior web developer looking for opportunities in Paris
+          and everywhere else.
         </p>
         <p>Love Music.</p>
-        <p>Hate well-kept lawn.</p>
+        <p>Hate none but well-kept lawn.</p>
       </AboutPageBottomLeft>
-      <Footer>For hire !</Footer>
+      <Footer>Available for hire.</Footer>
     </AboutPageBottom>
   </AboutPage>
 );

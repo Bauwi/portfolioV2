@@ -38,16 +38,21 @@ const Bar = styled.div`
   background: red;
   height: 0.5rem;
   margin: 0;
-  width: ${p => p.count * 8}%;
+  width: ${p => p.count / p.total * 100}%;
 `;
 
-export default ({ name, count, stackName }) => {
+export default ({ name, count, stackName, total }) => {
   return (
     <SkillsListItem>
       <Name>{name}</Name>
 
       <BarContainer>
-        <Bar total={projects.length} count={count} stackName={stackName} />
+        <Bar
+          total={projects.length}
+          count={count}
+          stackName={stackName}
+          total={total}
+        />
       </BarContainer>
 
       <Count>{count}</Count>

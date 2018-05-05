@@ -55,6 +55,12 @@ const ButtonsWrapper = styled.div`
   margin: 1rem;
 `;
 
+const Warning = styled.p`
+  color: red;
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0 1rem !important;
+`;
 export default class ProjectsListItemComp extends Component {
   renderStack = () => {
     const {
@@ -68,27 +74,32 @@ export default class ProjectsListItemComp extends Component {
   render() {
     const {
       styles,
-      project: { codeUrl, liveUrl },
+      project: { codeUrl, liveUrl, beginnerWarning },
     } = this.props;
     return (
       <ProjectsListItem styles={styles}>
         <ItemHeader>
           <Stack>{this.renderStack()}</Stack>
           <ButtonsWrapper>
-            <ExternalLink
-              value="code"
-              imgUrl="/images/github.png"
-              destination={codeUrl}
-            />
-            <ExternalLink
-              value="live"
-              imgUrl="/images/live.png"
-              destination={liveUrl}
-            />
+            {codeUrl && (
+              <ExternalLink
+                value="code"
+                imgUrl="/images/github.png"
+                destination={codeUrl}
+              />
+            )}
+            {liveUrl && (
+              <ExternalLink
+                value="live"
+                imgUrl="/images/live.png"
+                destination={liveUrl}
+              />
+            )}
           </ButtonsWrapper>
         </ItemHeader>
+        {beginnerWarning && <Warning>early beginner project</Warning>}
 
-        <p>{this.props.project.name.replace(' ', '_').toUpperCase()}</p>
+        <p>{this.props.project.name.replace(/ /g, '_').toUpperCase()}</p>
       </ProjectsListItem>
     );
   }
