@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-design-redux",
-  "description": "Gatsby starter using redux",
+  "name": "portfoliov2",
+  "description": "Kevin Philippe Portfolio - version 2",
   "version": "0.0.1",
-  "author": "Carl-Johan Kihl <carljohan.kihl@gmail.com>",
+  "author": "Kevin Philippe <kvn.philippe@gmail.com>",
   "dependencies": {
     "emotion": "^9.0.0",
     "emotion-server": "^9.0.0",
@@ -20,15 +20,14 @@
     "redux-devtools": "^3.4.1",
     "typography-theme-bootstrap": "^0.16.7"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma all --single-quote --write \"src/**/*.js\"",
+    "format":
+      "prettier --trailing-comma all --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

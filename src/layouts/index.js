@@ -27,10 +27,16 @@ const TemplateWrapper = ({ children }) => (
   <ThemeProvider theme={theme}>
     <Wrapper>
       <Helmet
-        title="Gatsby Default Redux Starter"
+        title="Portfolio - Kevin Philippe"
         meta={[
-          { name: 'description', content: 'Sample' },
-          { name: 'keywords', content: 'sample, something' },
+          {
+            name: 'description',
+            content: 'Junior web developer looking for opporunities',
+          },
+          {
+            name: 'keywords',
+            content: 'mern, react, redux, node, express, mongo',
+          },
         ]}
       />
       <Container>

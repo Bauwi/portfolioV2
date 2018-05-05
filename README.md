@@ -1,28 +1,55 @@
-# gatsby-starter-default
+![alt text](https://i.imgur.com/LKmigMp.png)
 
-Minimalistic starter template for Gatsby with Redux and Emotion to get you started.
+# Portfolio V2
 
-## Demo
+Here is my personnal portfolio built with GatsbyJS and deployed via Netlify
 
-https://caki0915.github.io/gatsby-starter-redux/
+## Getting Started
 
-## Features
+These instructions will get you a copy of the project up and running on your local machine for development. See deployment for notes on how to deploy the project on a live system.
 
-* [Redux](https://github.com/reactjs/redux) and [Redux-devtools](https://github.com/gaearon/redux-devtools).
-* [Emotion](https://github.com/emotion-js/emotion) with a basic theme and SSR
-* [Typography.js](https://kyleamathews.github.io/typography.js/)
-* Eslint rules based on Prettier and Airbnb
+### Prerequisites
 
-## Install
+Having NodeJs installed on your machine.
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+### Installing
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+Install node modules.
 
 ```
-gatsby new your-project-name https://github.com/caki0915/gatsby-starter-redux
+npm install
 ```
 
-## Deploy
+Run the development server.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/caki0915/gatsby-starter-redux)
+```
+gatsby develop
+```
+
+Check your browser.
+
+```
+http://localhost:8000/
+```
+
+## Deployment
+
+Working on it.
+
+## Built With
+
+* [GatsbyJS](https://www.gatsbyjs.org/) - Blazing-fast static site generator for React
+* [Maven](https://www.netlify.com/) - Build, deploy, and manage
+  modern web projects
+
+## Contributing
+
+No contribution expected.
+
+## Authors
+
+* **Kevin Philippe** - _Initial work_ - [Bauwi](https://github.com/Bauwi)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
