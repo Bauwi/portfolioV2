@@ -74,7 +74,7 @@ const IndexPage = () => (
       <div>
         <p>Enthusiastic 27 years old web development permanent learner.</p>
         <p>Fresh from the oven.</p>
-        <p>Autodidact.</p>
+        <p>Almost self-taught.</p>
       </div>
       <nav>
         <Link to="/about">ABOUT</Link>
