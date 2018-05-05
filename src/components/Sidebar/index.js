@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import styled from 'react-emotion';
 import Link from 'gatsby-link';
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 import { renderToString } from 'react-dom/server';
 import { extractCritical } from 'emotion-server';
 
@@ -8,11 +7,6 @@ exports.replaceRenderer = ({
   replaceBodyHTMLString,
   setHeadComponents,
 }) => {
-  // Connect Redux store
-  const ConnectedBody = () => (
-    <Provider store={store}>{bodyComponent}</Provider>
-  );
-
   // SSR for emotion
   const { html, ids, css } = extractCritical(renderToString(<ConnectedBody />));
 
