@@ -14,20 +14,17 @@
     "gatsby-plugin-typography": "^1.7.13",
     "react-emotion": "^9.0.0",
     "react-helmet": "^5.2.0",
-    "react-iframe": "^1.1.0",
-    "react-redux": "^5.0.6",
-    "redux": "^3.7.2",
-    "redux-devtools": "^3.4.1",
     "typography-theme-bootstrap": "^0.16.7"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format":
-      "prettier --trailing-comma all --single-quote --write \"src/**/*.js\"",
+    "format": "prettier --trailing-comma all --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
