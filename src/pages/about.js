@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'react-emotion';
 
-import { withPrefix } from 'gatsby-link';
+import europeTop from './../components/Icons/europe-top.png';
+import europeBottom from './../components/Icons/europe-bottom.png';
 
 const AboutPage = styled.div`
   height: 100%;
@@ -11,7 +12,7 @@ const AboutPageTop = styled.header`
   display: flex;
   justify-content: space-between;
   background-color: #eaeaea;
-  background-image: url(${withPrefix('/images/europe-top.png')});
+  background-image: url(${europeTop});
   background-repeat: no-repeat;
   background-position: 100% 0%;
   color: black;
@@ -25,7 +26,7 @@ const AboutPageTop = styled.header`
 `;
 
 const AboutPageBottom = styled.section`
-  background-image: url(${withPrefix('/images/europe-bottom.png')});
+  background-image: url(${europeBottom});
   background-repeat: no-repeat;
   background-position: 100% 0%;
   min-height: calc(90vh - 104px);
@@ -65,6 +66,7 @@ const Footer = styled.footer`
   height: 10vh;
   text-align: center;
 `;
+
 const AboutComp = () => (
   <AboutPage>
     <AboutPageTop>
