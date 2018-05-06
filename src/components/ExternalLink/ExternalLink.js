@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'react-emotion';
 import Link from 'gatsby-link';
 
+import GithubIcon from '../Icons/GithubIcon';
+
 const ExternalLink = styled.a`
   opacity: 0.3;
   background: none;
@@ -24,7 +26,7 @@ export default class ExternalLinkComp extends Component {
   render() {
     return (
       <ExternalLink href={this.props.destination} target="_blank">
-        <img src={this.props.imgUrl} alt={this.props.value} />
+        <GithubIcon />
       </ExternalLink>
     );
   }
