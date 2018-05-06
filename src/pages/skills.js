@@ -11,6 +11,7 @@ const { stackFront, stackBack, total } = getProjectsStats(projects);
 const SkillsPageTop = styled.section`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background: #eaeaea;
   color: black;
   min-height: 50vh;
@@ -88,9 +89,6 @@ class SkillsPage extends Component {
         <SkillsPageTop>
           <SkillsPageSectionHeader>
             <h2>Front</h2>
-            <aside>
-              These are not marks <Smile> =) </Smile>{' '}
-            </aside>
           </SkillsPageSectionHeader>
           <SkillsList
             stackName="stackFront"
@@ -103,6 +101,11 @@ class SkillsPage extends Component {
           >
             {showAllFront ? 'HIDE SOME' : 'SHOW ALL'}
           </Button>
+          <SkillsPageSectionFooter>
+            <p>
+              ...in <Total>{total}</Total> projects{' '}
+            </p>
+          </SkillsPageSectionFooter>
         </SkillsPageTop>
         <SkillsPageBottom>
           <SkillsPageSectionHeader>
@@ -120,9 +123,9 @@ class SkillsPage extends Component {
             {showAllBack ? 'HIDE SOME' : 'SHOW ALL'}
           </Button>
           <SkillsPageSectionFooter>
-            <p>
-              ...in <Total>{total}</Total> projects{' '}
-            </p>
+            <aside>
+              These are not marks <Smile> =) </Smile>{' '}
+            </aside>
           </SkillsPageSectionFooter>
         </SkillsPageBottom>
       </div>

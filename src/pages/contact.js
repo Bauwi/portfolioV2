@@ -22,6 +22,9 @@ const Form = styled.form`
   justify-content: space-between;
   height: 100%;
   width: 50%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const Label = styled.label`
   font-family: Helvetica, Arial, sans-serif;
@@ -36,6 +39,8 @@ const Input = styled.input`
   &:nth-child(2) {
     background: none;
     border-bottom: 1px solid black;
+    padding: 1rem;
+
     &:focus {
       border-color: red;
     }
@@ -55,18 +60,25 @@ const Input = styled.input`
 const Textarea = styled.textarea`
   border-radius: 5px;
   height: 50%;
+  padding: 1rem;
   outline: none;
   &:focus {
     border-color: red;
   }
 `;
 const Header = styled.header`
-  padding: 1rem 0 0 1rem;
+  padding: 1rem 1rem 0 1rem;
   width: 100%;
 
   h2 {
     font-family: Nothing You Could Do, Arial, sans-serif;
     margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    h2 {
+      text-align: right;
+    }
   }
 `;
 const Email = styled.a`

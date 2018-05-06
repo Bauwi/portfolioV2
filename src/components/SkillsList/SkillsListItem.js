@@ -16,17 +16,27 @@ const SkillsListItem = styled.li`
     font-weight: 900;
     text-align: right;
   }
+  @media (max-width: 768px) {
+    justify-content: space-around;
+  }
 `;
 
 const Name = styled.p`
   font-size: 0.7rem;
   margin: 0 2rem 0 0;
   width: 15%;
+  @media (max-width: 768px) {
+    margin: 0;
+    width: 30%;
+  }
 `;
 
 const Count = styled.p`
   font-size: 1rem;
   width: 5%;
+  @media (max-width: 768px) {
+    width: 10%;
+  }
 `;
 
 const BarContainer = styled.div`

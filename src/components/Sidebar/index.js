@@ -7,6 +7,10 @@ import ContactSVG from './ContactSVG';
 const SideBar = styled.aside`
   height: 100vh;
   width: 15vw;
+  @media (max-width: 768px) {
+    height: auto;
+    width: 100%;
+  }
 `;
 
 const NavBar = styled.div`
@@ -17,12 +21,21 @@ const NavBar = styled.div`
   border-right: 5px solid red;
   height: 100vh;
   width: 15vw;
+  @media (max-width: 768px) {
+    position: initial;
+    flex-direction: row;
+    height: 20vh;
+    width: 100%;
+  }
 `;
 
 const NavBarSection = styled.nav`
   display: flex;
   flex-direction: column;
   padding: 3rem 0;
+  @media (max-width: 768px) {
+    padding: 1rem 1rem;
+  }
 `;
 /* ************************************************ */
 /* trick to make activeClassName work properly      */

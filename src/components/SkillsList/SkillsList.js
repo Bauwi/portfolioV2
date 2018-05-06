@@ -4,8 +4,6 @@ import styled from 'react-emotion';
 import SkillsListItem from './SkillsListItem';
 
 const SkillsList = styled.ul`
-  display: flex;
-  flex-direction: column;
   margin: 1rem 0 0 0;
 `;
 

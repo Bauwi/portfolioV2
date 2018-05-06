@@ -22,9 +22,18 @@ const ProjectsListTitle = styled.h2`
 const ProjectsList = styled.ul`
   align-items: center;
   display: flex;
+  flex: 1;
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    > li:nth-child(2n + 1) {
+      background: ${p =>
+        p.title === 'Relevant...' ? 'white' : 'rgba(255,255,255, .1)'};
+    }
+  }
 `;
 export default class ProjectsListComp extends Component {
   renderprojectsList = () => {
@@ -43,7 +52,9 @@ export default class ProjectsListComp extends Component {
     return (
       <ProjectsListWrapper>
         <ProjectsListTitle>{this.props.title}</ProjectsListTitle>
-        <ProjectsList>{this.renderprojectsList()}</ProjectsList>
+        <ProjectsList title={this.props.title}>
+          {this.renderprojectsList()}
+        </ProjectsList>
         <p />
       </ProjectsListWrapper>
     );

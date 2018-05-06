@@ -30,6 +30,26 @@ const ProjectsListItem = styled.li`
       opacity: 1;
     }
   }
+
+  @media (max-width: 1024px) {
+    max-width: initial;
+    height: 25vw;
+    width: 25vw;
+  }
+
+  @media (max-width: 768px) {
+    border: none;
+    flex-direction: column-reverse;
+    width: 100vw;
+    max-width: initial;
+    height: auto;
+    min-height: 20vh;
+    margin: 0;
+    padding: 10px;
+    &:hover {
+      border: none;
+    }
+  }
 `;
 const ItemHeader = styled.header`
   display: flex;
@@ -53,6 +73,9 @@ const ButtonsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin: 1rem;
+  @media (max-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 const Warning = styled.p`

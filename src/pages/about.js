@@ -27,9 +27,12 @@ const AboutPageBottom = styled.section`
   background-repeat: no-repeat;
   background-position: 100% 0%;
   min-height: calc(90vh - 104px);
+  @media (max-width: 768px) {
+    min-height: calc(70vh - 104px);
+  }
 `;
 
-const AboutPageBottomLeft = styled.section`
+const AboutPageBottomMain = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,6 +47,11 @@ const AboutPageBottomLeft = styled.section`
     margin-left: 2rem;
     font-weight: 300;
     opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    min-height: calc(70vh - 104px);
   }
 `;
 
@@ -62,14 +70,14 @@ const AboutComp = () => (
     </AboutPageTop>
 
     <AboutPageBottom>
-      <AboutPageBottomLeft>
+      <AboutPageBottomMain>
         <p>
           27 years old junior web developer looking for opportunities in Paris
           and everywhere else.
         </p>
         <p>Love Music.</p>
         <p>Hate none but well-kept lawn.</p>
-      </AboutPageBottomLeft>
+      </AboutPageBottomMain>
       <Footer>Available for hire.</Footer>
     </AboutPageBottom>
   </AboutPage>

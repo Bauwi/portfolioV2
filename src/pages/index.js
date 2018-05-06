@@ -27,6 +27,9 @@ const IndexPageHeader = styled.header`
     color: black;
     font-family: 'Nothing You Could Do';
   }
+  @media (max-width: 768px) {
+    height: 50vh;
+  }
 `;
 const LastName = styled.span`
   color: rgba(0, 0, 0, 0.1);
@@ -58,6 +61,12 @@ const IndexPageMain = styled.section`
       &:hover {
         color: red;
       }
+    }
+  }
+  @media (max-width: 768px) {
+    max-height: 30vh;
+    nav {
+      display: none;
     }
   }
 `;
