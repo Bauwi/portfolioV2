@@ -3,6 +3,7 @@ import styled from 'react-emotion';
 import Link from 'gatsby-link';
 
 import ContactSVG from './ContactSVG';
+import GithubIcon from '../Icons/GithubIcon';
 
 const SideBar = styled.aside`
   height: 100vh;
@@ -88,7 +89,7 @@ export default () => (
           <ContactSVG />
         </Item>
         <GithubLink href="https://github.com/Bauwi" target="_blank">
-          <img src="/images/github.png" alt="github logo" />
+          <GithubIcon />
         </GithubLink>
       </NavBarSection>
     </NavBar>

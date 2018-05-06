@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'react-emotion';
 
-import ExternalLink from './../ExternalLink/ExternalLink';
+import GithubIcon from '../Icons/GithubIcon';
+import LiveIcon from '../Icons/LiveIcon';
 
 const ProjectsListItem = styled.li`
   align-items: flex-end;
@@ -84,6 +85,25 @@ const Warning = styled.p`
   margin: 0;
   padding: 0 1rem !important;
 `;
+
+const ExternalLink = styled.a`
+  opacity: 0.3;
+  background: none;
+  border: none;
+  border-radius: 50%;
+  color: #222;
+  cursor: pointer;
+  font-size: 0.8rem;
+  height: 2rem;
+  width: 2rem;
+  margin: 0.2rem 0;
+  padding: 0.2rem;
+
+  &:hover {
+    background: rgba(255, 0, 0, 0.1);
+  }
+`;
+
 export default class ProjectsListItemComp extends Component {
   renderStack = () => {
     const {
@@ -107,16 +127,16 @@ export default class ProjectsListItemComp extends Component {
             {codeUrl && (
               <ExternalLink
                 value="code"
-                imgUrl="/images/github.png"
+                imgUrl="github.png"
                 destination={codeUrl}
-              />
+              >
+                <GithubIcon />
+              </ExternalLink>
             )}
             {liveUrl && (
-              <ExternalLink
-                value="live"
-                imgUrl="/images/live.png"
-                destination={liveUrl}
-              />
+              <ExternalLink value="live" destination={liveUrl}>
+                <LiveIcon />
+              </ExternalLink>
             )}
           </ButtonsWrapper>
         </ItemHeader>
