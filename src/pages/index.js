@@ -29,6 +29,12 @@ const IndexPageHeader = styled.header`
   }
   @media (max-width: 768px) {
     height: 50vh;
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+    }
   }
 `;
 const LastName = styled.span`
@@ -67,6 +73,9 @@ const IndexPageMain = styled.section`
     max-height: 30vh;
     nav {
       display: none;
+    }
+    div {
+      padding: 1rem;
     }
   }
 `;

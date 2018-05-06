@@ -35,7 +35,20 @@ const NavBarSection = styled.nav`
   flex-direction: column;
   padding: 3rem 0;
   @media (max-width: 768px) {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 1rem 1rem;
+    &:nth-child(2) {
+      background: white;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+      padding-left: 1rem;
+      img {
+        margin: 0;
+      }
+    }
   }
 `;
 /* ************************************************ */
@@ -54,6 +67,10 @@ const BaseItem = styled(Link)`
   svg {
     width: 2rem;
     height: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
   }
 `;
 

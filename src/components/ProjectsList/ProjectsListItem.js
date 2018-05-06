@@ -54,6 +54,9 @@ const ProjectsListItem = styled.li`
 `;
 const ItemHeader = styled.header`
   display: flex;
+  @media (max-width: 768px) {
+    align-items: center;
+  }
 `;
 const Stack = styled.ul`
   display: flex;
@@ -76,6 +79,7 @@ const ButtonsWrapper = styled.div`
   margin: 1rem;
   @media (max-width: 768px) {
     flex-direction: row;
+    margin: 0;
   }
 `;
 
