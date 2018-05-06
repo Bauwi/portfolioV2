@@ -1,5 +1,5 @@
 import React from 'react';
-import githubLogo from './../../../public/images/github.png';
+import githubLogo from './github.png';
 
 console.log(githubLogo);
 
