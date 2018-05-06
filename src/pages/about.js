@@ -76,11 +76,11 @@ const AboutComp = () => (
     <AboutPageBottom>
       <AboutPageBottomMain>
         <p>
-          27 years old junior web developer looking for opportunities in Paris
-          and everywhere else.
+          Twenty-seven years old junior web developer looking for opportunities
+          in Paris and everywhere else.
         </p>
-        <p>Love Music.</p>
-        <p>Hate none but well-kept lawn.</p>
+        <p> - Love Music -</p>
+        <p> - Hate none but well-kept lawn -</p>
       </AboutPageBottomMain>
       <Footer>Available for hire.</Footer>
     </AboutPageBottom>

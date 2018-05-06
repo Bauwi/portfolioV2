@@ -71,6 +71,13 @@ const IndexPageMain = styled.section`
   }
   @media (max-width: 768px) {
     max-height: 30vh;
+
+    div {
+      padding: 1rem;
+    }
+  }
+  @media (max-width: 428px) {
+    max-height: 30vh;
     nav {
       display: none;
     }
