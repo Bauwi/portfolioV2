@@ -5,6 +5,8 @@ import { ThemeProvider } from 'emotion-theming';
 import Sidebar from '../components/Sidebar';
 import theme from '../utils/theme';
 
+import icon from '../../static/images/icon.png';
+
 const Wrapper = styled.main`
   background: black;
   width: 100%;
@@ -47,7 +49,7 @@ const TemplateWrapper = ({ children }) => (
         ]}
       >
         {' '}
-        <link rel="icon" type="image/png" href="/images/icon.png" />
+        <link rel="icon" type="image/png" href={`${icon}`} />
       </Helmet>
       <Container>
         <Sidebar />
