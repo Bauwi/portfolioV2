@@ -133,12 +133,13 @@ export default class ProjectsListItemComp extends Component {
                 value="code"
                 imgUrl="github.png"
                 href={codeUrl}
+                target="_blank"
               >
                 <GithubIcon />
               </ExternalLink>
             )}
             {liveUrl && (
-              <ExternalLink value="live" href={liveUrl}>
+              <ExternalLink value="live" href={liveUrl} target="_blank">
                 <LiveIcon />
               </ExternalLink>
             )}
