@@ -1,5 +1,14 @@
 const projects = [
   {
+    id: 14,
+    liveUrl: 'https://fipplusun.herokuapp.com/radios/70',
+    name: 'Fip +1',
+    stackFront: ['html', 'react', 'redux', 'styled components', 'css'],
+    stackBack: ['node', 'express', 'herokuapp', 'sockets', 'mongo'],
+    top: true,
+    beginnerWarning: false,
+  },
+  {
     id: 1,
     codeUrl: 'https://github.com/Bauwi/node-redux-chat-app',
     liveUrl: 'https://react-node-chat-app.herokuapp.com/',
@@ -12,19 +21,10 @@ const projects = [
   {
     id: 2,
     codeUrl: 'https://github.com/Bauwi/blog-app',
-    liveUrl: 'https://www.tekkne.com/',
+    liveUrl: 'https://bloyster.herokuapp.com/',
     name: 'Blog App',
     stackFront: ['html', 'react', 'redux', 'scss', 'react-router'],
     stackBack: ['firebase', 'herokuapp'],
-    top: true,
-    beginnerWarning: false,
-  },
-  {
-    id: 14,
-    liveUrl: 'https://fipplusun.herokuapp.com/radios/70',
-    name: 'Fip +1',
-    stackFront: ['html', 'react', 'redux', 'styled components', 'css'],
-    stackBack: ['node', 'express', 'herokuapp', 'sockets', 'mongo'],
     top: true,
     beginnerWarning: false,
   },
