@@ -118,16 +118,6 @@ const projects = [
     top: false,
     beginnerWarning: true,
   },
-  {
-    id: 11,
-    codeUrl: 'https://github.com/Bauwi',
-    liveUrl: 'https://github.com/Bauwi',
-    name: 'Blog App2',
-    stackFront: ['html', 'scss', 'jquery'],
-    stackBack: ['firebase', 'herokuapp'],
-    top: false,
-    beginnerWarning: false,
-  },
 ];
 
 module.exports = {
