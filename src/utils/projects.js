@@ -20,6 +20,15 @@ const projects = [
     beginnerWarning: false,
   },
   {
+    id: 14,
+    liveUrl: 'https://fipplusun.herokuapp.com/radios/70',
+    name: 'Fip +1',
+    stackFront: ['html', 'react', 'redux', 'styled components', 'css'],
+    stackBack: ['node', 'express', 'herokuapp', 'sockets', 'mongo'],
+    top: true,
+    beginnerWarning: false,
+  },
+  {
     id: 3,
     codeUrl: 'https://github.com/Bauwi/team-builder',
     liveUrl: 'https://line-me-up.herokuapp.com/',
@@ -36,7 +45,7 @@ const projects = [
     name: 'Team Builder alt',
     stackFront: ['html', 'react', 'redux', 'scss', 'css'],
     stackBack: ['node', 'express', 'herokuapp'],
-    top: true,
+    top: false,
     beginnerWarning: false,
   },
   {
